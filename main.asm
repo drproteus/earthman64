@@ -45,11 +45,11 @@ copyloop:
 	lda $4328,x  ; copy colours to colour RAM
 	sta $d800,x
 	lda $4428,x
-	sta $d800,x
+	sta $d900,x
 	lda $4528,x
-	sta $d800,x
+	sta $da00,x
 	lda $4628,x
-	sta $d800,x
+	sta $db00,x
 	dex
 	bne copyloop
 

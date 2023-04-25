@@ -14,7 +14,7 @@ After loading, enter `SYS 2064` to run.
 
 
 ## Todo
-* Fix colors.
+* ~~Fix colors.~~
 * Add scrolling text.
 
 
