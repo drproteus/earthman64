@@ -69,6 +69,6 @@ irq:
 	jmp    $ea81
 
 	org $1000-$7e
-	incbin "clocks.sid"
+	incbin "assets/clocks.sid"
 	org  $1FFE
-	incbin "dad.kla"
+	incbin "assets/dad.kla"
