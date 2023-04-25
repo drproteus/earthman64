@@ -10,6 +10,8 @@ dask main.asm -oearthman.prg
 ```
 Run with [VICE](https://vice-emu.sourceforge.io/).
 
+After loading, enter `SYS 2064` to run.
+
 
 ## Todo
 * Fix colors.
