@@ -1,4 +1,4 @@
-	processor	6502
+	processor 6502
 	org	$0810
 
 	lda #$00
@@ -66,9 +66,9 @@ loop:
 irq:
 	jsr $1003
 	asl $d019
-	jmp    $ea81
+	jmp $ea81
 
 	org $1000-$7e
 	incbin "assets/clocks.sid"
-	org  $1FFE
+	org  $1FFE ; 2 bytes behind due to header
 	incbin "assets/dad.kla"
