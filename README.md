@@ -13,6 +13,8 @@ After loading, enter `sys 2064` to run.
 
 ![earthman64](https://user-images.githubusercontent.com/6041429/234164742-8972da2d-43bb-41c8-9559-1041ca3be1a8.GIF)
 
+[demo](https://youtu.be/Xy29E8mnZm4)
+
 ## Todo
 * ~~Fix colors.~~
 * Add scrolling text.
