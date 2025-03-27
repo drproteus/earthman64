@@ -1,17 +1,15 @@
-name: Build and Release Earthman PRG
+name: Build and Attach Earthman PRG to Release
 
 on:
-  push:
-    tags:
-      - 'v*'  # Trigger on version tags like v1.0.0
+  release:
+    types: [published]  # Trigger when a release is published
 
 jobs:
-  build-and-release:
+  build-and-attach:
     runs-on: ubuntu-latest
     
-    # Add permissions here
     permissions:
-      contents: write  # Required to create releases and upload assets
+      contents: write  # Required to upload assets to releases
     
     steps:
       - name: Checkout repository
@@ -25,23 +23,12 @@ jobs:
       - name: Build with dasm
         run: dasm main.asm -oearthman.prg
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
-          draft: false
-          prerelease: false
-
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          upload_url: ${{ github.event.release.upload_url }}  # Use the release's upload URL
           asset_path: ./earthman.prg
           asset_name: earthman.prg
           asset_content_type: application/octet-stream
