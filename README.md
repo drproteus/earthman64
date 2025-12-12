@@ -1,6 +1,6 @@
 # Earthman64
 
-A Commodore 64 tribute to my father.
+A Commodore 64 memorial demo, work in progress.
 
 ## Building
 Requires [dasm](https://dasm-assembler.github.io/).
@@ -24,5 +24,6 @@ After loading, enter `sys 2064` to run.
 * Images converted with [project one](http://p1.untergrund.net/).
 * Bitmap display code adapted from: https://www.lemon64.com/forum/viewtopic.php?t=18492&amp%3Bstart=15
 * SID output code adapted from: https://digitalerr0r.net/2011/05/01/commodore-64-programming-9-interrupts-and-music/
+
 
 
